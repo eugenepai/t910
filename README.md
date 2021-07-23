@@ -20,9 +20,9 @@
 - [WCA Regulations](https://www.worldcubeassociation.org/regulations/)
 
 ## How to Play
-Check out [[here]](https://eugenepai.github.io/t907/howToPlay.html)
-need help to solve Rubik's Cube? [[Hint]](https://eugenepai.github.io/t908/reference/RC_SolveAlgorithm.jpg)
+- Check out [[here]](https://eugenepai.github.io/t907/howToPlay.html)
+- need help to solve Rubik's Cube? [[Hint]](https://eugenepai.github.io/t908/reference/RC_SolveAlgorithm.jpg)
 
 ## Support or Contact
 
-Having trouble with playing cube? [contact support](https://rubiks.seanachan.tw/contact).
+- Having trouble with playing cube? [contact support](https://rubiks.seanachan.tw/contact).
