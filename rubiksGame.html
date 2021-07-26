@@ -168,6 +168,24 @@
                     -webkit-transition: none; 
                     transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,  0,0,0,1);
                     transition: none;  }
+        .bounce {
+            position:relative;
+            bottom:0;
+            animation:bounce 1s 5; -webkit-animation:bounce 1s 5; 
+            }
+            
+        @-webkit-keyframes bounce {
+            0%       { bottom:5px; }
+            25%, 75% { bottom:25px; }
+            50%      { bottom:50px; }
+            100%     { bottom:0;}
+            }
+        @keyframes bounce {
+            0%       { bottom:5px; }
+            25%, 75% { bottom:25px; left:50px; }
+            50%      { bottom:50px;  left:-50px;}
+            100%     { bottom:0;}
+            }
     </style>
 </head>
 <body>
@@ -571,7 +589,8 @@
         if (doneRC === "solved" ) {            
             clearTimeout(eventGameElapsedTime);
             document.getElementById('gameElapsed').innerHTML = "總時間：" + document.getElementById('gameElapsed').innerHTML;
-            alert("congradulations!!");
+            document.getElementById('cube').classList.add("bounce");
+            // alert("congradulations!!");
         }
     }
 //===============================  Start Mode  ================================================
