@@ -182,11 +182,11 @@
             100% { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,360deg) translateZ(0px) ;z-index:-1;}
             }
         @-webkit-keyframes shakeAnimation {
-            0% {transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,0deg) translateZ(0px) ;z-index:-1;}
-            25%{ transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg) translateZ(150px) ;z-index:-1; }
-            50% { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg) translateZ(200px) ;z-index:-1;}
-            75% { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,270deg) translateZ(150px) ;z-index:-1; }
-            100% { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,360deg) translateZ(0px) ;z-index:-1;}
+            0% {-webkit-transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,0deg) translateZ(0px) ;z-index:-1;}
+            25%{ -webkit-transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg) translateZ(150px) ;z-index:-1; }
+            50% { -webkit-transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg) translateZ(200px) ;z-index:-1;}
+            75% { -webkit-transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,270deg) translateZ(150px) ;z-index:-1; }
+            100% { -webkit-transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,360deg) translateZ(0px) ;z-index:-1;}
             }
         /* cube bouncing when done */
         .bounce { position:relative;  bottom:0;   animation:bounce 1s 5; -webkit-animation:bounce 1s 5; }            
@@ -208,7 +208,7 @@
             font-weight:bolder; font-size:4.5vw;
             color:red; text-shadow:0 0 10px white, 0 0 30px yellow;
             z-index:5;
-            /* -webkit-transform-style:preserve-3d; transform-style:preserve-3d; */
+            -webkit-transform-style:preserve-3d; transform-style:preserve-3d;
         }
         .flyInText .flyInTextXX {
             height:2em;
@@ -217,7 +217,7 @@
             margin: auto;
             opacity:0;
             z-index:5;
-            /* -webkit-transform-style:preserve-3d; transform-style:preserve-3d; */
+            -webkit-transform-style:preserve-3d; transform-style:preserve-3d;
         }
         .flyText1, .flyText2, .flyText3, .flyText4, .flyText5, .flyText6 {z-index:5;}
     </style>
