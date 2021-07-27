@@ -169,7 +169,7 @@
                     transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,  0,0,0,1);
                     transition: none;  }
         /* cube bouncing when done */
-        .bounce { position:relative;  bottom:0;   animation:bounce 1s 3; -webkit-animation:bounce 1s 3; }            
+        .bounce { position:relative;  bottom:0;   animation:bounce 1s 5; -webkit-animation:bounce 1s 5; }            
         @-webkit-keyframes bounce {
             0% { bottom:5px; }                  25%, 75% { bottom:25px; left:50px; }
             50% { bottom:50px; left:-50px;}     100% { bottom:0;}
@@ -936,12 +936,13 @@
         $(".flyInText").append($("<span></span>").addClass("flyInTextXX flyText3").text(".Toutes nos félicitations."));
         $(".flyInText").append($("<span></span>").addClass("flyInTextXX flyText4").text(".Felicidades."));
 
-        zoomIn = [0.5, 1]; zoomOut = [1, 0];
-        flyIn = 150; flyOut = 250;
+        zoomIn = [0.2, 1]; zoomOut = [1, 0];
+        flyIn = 150; flyOut = 1000;
         delay = 350;
         anime.timeline({loop: false})
             .add({ targets:'.flyInText .flyText1', opacity: 1, scale:zoomIn, duration:flyIn, zIndex:{value:5} })
             .add({ targets:'.flyInText .flyText1', opacity: 0, scale:zoomOut, duration:flyOut, easing:"easeInExpo", delay:delay, zIndex:{value:5} })
+            // .add({ targets:'.flyInText .flyText1', opacity: [1,0], scale:1, duration:flyIn, easing:"easeInExpo", delay:delay, zIndex:{value:5} })
 
             .add({ targets:'.flyInText .flyText2', opacity: 1, scale:zoomIn, duration:flyIn, zIndex:{value:5} })
             .add({ targets:'.flyInText .flyText2', opacity: 0, scale:zoomOut, duration:flyOut, easing:"easeInExpo", delay:delay, zIndex:{value:5} })
