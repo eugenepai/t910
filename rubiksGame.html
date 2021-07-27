@@ -170,6 +170,22 @@
                     -webkit-transition: none; 
                     transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,  0,0,0,1);
                     transition: none;  }
+        /* shaking cube animation */
+        .shakeAnimation { position:relative;  bottom:0;   animation:shakeAnimation 1s 5; -webkit-animation:shakeAnimation 1s 5; }            
+        @keyframes shakeAnimation {
+            0% {transform:rotate3d(1,0,0,1800deg); }                
+            25%{ transform:rotate3d(1,0,0,180deg); }
+            50% { transform:rotate3d(0,0,1,90deg);}     
+            75% { transform:rotate3d(0,0,1,180deg); }
+            100% { transform:rotate3d(0,0,0,360deg);}
+            }
+        @-webkit-keyframes shakeAnimation {
+            0% {transform:rotate3d(1,0,0,180deg); }                
+            25%{ transform:rotate3d(1,0,0,180deg); }
+            50% { transform:rotate3d(0,0,1,90deg);}     
+            75% { transform:rotate3d(0,0,1,180deg); }
+            100% { transform:rotate3d(0,0,0,360deg);}
+            }
         /* cube bouncing when done */
         .bounce { position:relative;  bottom:0;   animation:bounce 1s 5; -webkit-animation:bounce 1s 5; }            
         @-webkit-keyframes bounce {
@@ -607,7 +623,8 @@
         });
         if (doneRC === "solved" && gameTimer === "timerOn" ) {            
             clearTimeout(eventGameElapsedTime);
-            document.getElementById('cube').classList.add("bounce");
+            // document.getElementById('cube').classList.add("bounce");
+            document.getElementById('cube').classList.add("shakeAnimation");
             gameTimer = "timerOff";
             flyInText();
             $('.flyInText').on( 'transitionend webkitTransitionEnd',function() {
