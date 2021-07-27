@@ -940,23 +940,23 @@
         flyIn = 150; flyOut = 250;
         delay = 350;
         anime.timeline({loop: false})
-            .add({ targets:'.flyInText .flyText1', opacity: 1, scale:zoomIn, duration:flyIn, zIndex:5 })
-            .add({ targets:'.flyInText .flyText1', opacity: 0, scale:zoomOut, duration:flyOut, easing:"easeInExpo", delay:delay, zIndex:5 })
+            .add({ targets:'.flyInText .flyText1', opacity: 1, scale:zoomIn, duration:flyIn, zIndex:{value:5} })
+            .add({ targets:'.flyInText .flyText1', opacity: 0, scale:zoomOut, duration:flyOut, easing:"easeInExpo", delay:delay, zIndex:{value:5} })
 
-            .add({ targets:'.flyInText .flyText2', opacity: 1, scale:zoomIn, duration:flyIn, zIndex:5 })
-            .add({ targets:'.flyInText .flyText2', opacity: 0, scale:zoomOut, duration:flyOut, easing:"easeInExpo", delay:delay, zIndex:5 })
+            .add({ targets:'.flyInText .flyText2', opacity: 1, scale:zoomIn, duration:flyIn, zIndex:{value:5} })
+            .add({ targets:'.flyInText .flyText2', opacity: 0, scale:zoomOut, duration:flyOut, easing:"easeInExpo", delay:delay, zIndex:{value:5} })
 
-            .add({ targets:'.flyInText .flyText3', opacity: 1, scale:zoomIn,duration:flyIn, zIndex:5 })
-            .add({ targets:'.flyInText .flyText3', opacity: 0, scale:zoomOut,duration:flyOut, easing:"easeInExpo", delay:delay, zIndex:5 })
+            .add({ targets:'.flyInText .flyText3', opacity: 1, scale:zoomIn,duration:flyIn, zIndex:{value:5} })
+            .add({ targets:'.flyInText .flyText3', opacity: 0, scale:zoomOut,duration:flyOut, easing:"easeInExpo", delay:delay, zIndex:{value:5} })
             
-            .add({ targets:'.flyInText .flyText4', opacity: 1, scale:zoomIn, duration:flyIn, zIndex:5 })
-            .add({ targets:'.flyInText .flyText4', opacity: 0, scale:zoomOut, duration:flyOut, easing:"easeInExpo", delay:delay, zIndex:5 })
+            .add({ targets:'.flyInText .flyText4', opacity: 1, scale:zoomIn, duration:flyIn, zIndex:{value:5} })
+            .add({ targets:'.flyInText .flyText4', opacity: 0, scale:zoomOut, duration:flyOut, easing:"easeInExpo", delay:delay, zIndex:{value:5} })
 
-            .add({ targets:'.flyInText .flyText5', opacity: 1, scale:zoomIn, duration:flyIn, zIndex:5 })
-            .add({ targets:'.flyInText .flyText5', opacity: 0, scale:zoomOut, duration:flyOut, easing:"easeInExpo", delay:delay, zIndex:5 })
+            .add({ targets:'.flyInText .flyText5', opacity: 1, scale:zoomIn, duration:flyIn, zIndex:{value:5} })
+            .add({ targets:'.flyInText .flyText5', opacity: 0, scale:zoomOut, duration:flyOut, easing:"easeInExpo", delay:delay, zIndex:{value:5} })
 
-            .add({ targets:'.flyInText .flyText6', opacity: 1, scale:zoomIn, duration:flyIn, zIndex:5 })
-            .add({ targets:'.flyInText .flyText6', opacity: 0, scale:zoomOut, duration:flyOut, easing:"easeInExpo", delay:delay, zIndex:5 })
+            .add({ targets:'.flyInText .flyText6', opacity: 1, scale:zoomIn, duration:flyIn, zIndex:{value:5} })
+            .add({ targets:'.flyInText .flyText6', opacity: 0, scale:zoomOut, duration:flyOut, easing:"easeInExpo", delay:delay, zIndex:{value:5} })
 
             .add({ targets:'.flyInText', opacity:0, duration:flyOut, delay:delay, 
                     complete: function(anim){
