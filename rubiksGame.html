@@ -202,7 +202,7 @@
         .flyInText {
             height:90%;width:90%;
             position:absolute; text-align:center;
-            top:0; right:0; bottom:0; left:0;
+            top:10vw; left:10vw; right:10vw; bottom:10vw;
             margin:auto;
             height:2em;
             font-weight:bolder; font-size:4.5vw;
@@ -212,8 +212,8 @@
         }
         .flyInText .flyInTextXX {
             height:2em;
-            position: absolute;
-            top:0; right:0; bottom:0; left:0;
+            position: absolute; text-align:center;
+            top:10vw; left:10vw; right:10vw; bottom:10vw;
             margin: auto;
             opacity:0;
             z-index:5;
@@ -956,12 +956,12 @@
     document.getElementById("faceMoveControl").addEventListener("touchmove",touchUpEvent2Layer,false);
 //------- animation by anime.js --------------------------------------------------------------------------------
     function flyInText() {
-        $("#mainTable").append($("<div></div>").addClass("flyInText"));
-        // $("body").append($("<div></div>").addClass("flyInText"));
-        $(".flyInText").append($("<span></span>").addClass("flyInTextXX flyText1").text(".Congratulation."));
-        $(".flyInText").append($("<span></span>").addClass("flyInTextXX flyText2").text(".おめでとう."));
-        $(".flyInText").append($("<span></span>").addClass("flyInTextXX flyText3").text(".Toutes nos félicitations."));
-        $(".flyInText").append($("<span></span>").addClass("flyInTextXX flyText4").text(".Felicidades."));
+        // $("#mainTable").append($("<div></div>").addClass("flyInText"));
+        $("body").append($("<div></div>").addClass("flyInText"));
+        $(".flyInText").append($("<div></div>").addClass("flyInTextXX flyText1").text(".Congratulation."));
+        $(".flyInText").append($("<div></div>").addClass("flyInTextXX flyText2").text(".おめでとう."));
+        $(".flyInText").append($("<div></div>").addClass("flyInTextXX flyText3").text(".Toutes nos félicitations."));
+        $(".flyInText").append($("<div></div>").addClass("flyInTextXX flyText4").text(".Felicidades."));
 
         zoomIn = [0.2, 0.9]; zoomOut = [1, 0];
         flyIn = 150; flyOut = 1000;
