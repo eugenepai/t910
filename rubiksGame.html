@@ -172,7 +172,8 @@
                     transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,  0,0,0,1);
                     transition: none;  }
         /* shaking cube animation */
-        .shakeAnimation { position:relative; z-index:1; bottom:0;   animation:shakeAnimation 1s 6; -webkit-animation:shakeAnimation 1s 6; }            
+        .shakeAnimation { position:relative; z-index:1; bottom:0;  -webkit-overflow-scrolling: auto !important; 
+            animation:shakeAnimation 1s 6; -webkit-animation:shakeAnimation 1s 6; }            
         @keyframes shakeAnimation {
             0% {transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,0deg) translateZ(0px);  }
             25%{ transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg) translateZ(180px); }
