@@ -39,6 +39,7 @@
         .rightText {text-align:right; }
         /* ============================== cube setting ============================== */
         .cubeClass {
+            z-index: 1;
             width:100px; height: 100px; display:block; margin:270px auto 180px auto; position:relative;
             -webkit-perspective:none;
             -webkit-transform-style: preserve-3d;
@@ -49,6 +50,7 @@
             transform: rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) ;
             transition: all 350ms ease-in-out; }
         .cubeClass div {
+            z-index: 1;
             box-sizing: border-box;
             width:100%; height:100%;
             position:absolute;
