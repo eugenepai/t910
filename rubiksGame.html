@@ -605,7 +605,7 @@
         });
         if (doneRC === "solved" && gameTimer === "timerOn" ) {            
             clearTimeout(eventGameElapsedTime);
-            // document.getElementById('cube').classList.add("bounce");
+            document.getElementById('cube').classList.add("bounce");
             gameTimer = "timerOff";
             flyInText();
             $('.flyInText').on( 'transitionend webkitTransitionEnd',function() {
