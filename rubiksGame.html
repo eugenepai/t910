@@ -198,7 +198,7 @@
     </style>
 </head>
 <body style="background-color:#222222;">
-    <table border="1" class="tbl">
+    <table id="mainTable" border="1" class="tbl">
         <thead></thead>
         <tbody>
             <tr height=15% class="tbltr12">
@@ -930,7 +930,7 @@
     document.getElementById("faceMoveControl").addEventListener("touchmove",touchUpEvent2Layer,false);
 //------- animation by anime.js --------------------------------------------------------------------------------
     function flyInText() {
-        $("body").append($("<div></div>").addClass("flyInText"));
+        $("#mainTable").append($("<div></div>").addClass("flyInText"));
         $(".flyInText").append($("<span></span>").addClass("flyInTextXX flyText1").text(".Congradulations."));
         $(".flyInText").append($("<span></span>").addClass("flyInTextXX flyText2").text(".おめでとう."));
         $(".flyInText").append($("<span></span>").addClass("flyInTextXX flyText3").text(".Toutes nos félicitations."));
