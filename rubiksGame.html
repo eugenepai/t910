@@ -175,11 +175,11 @@
         .shakeAnimation { position:relative; z-index:1; bottom:0;  -webkit-overflow-scrolling: auto !important; 
             animation:shakeAnimation 1s 6; -webkit-animation:shakeAnimation 1s 6; }            
         @keyframes shakeAnimation {
-            0% {transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,0deg) ;z-index:1;}
-            25%{ transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg) ;z-index:1; }
-            50% { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg) ;z-index:1;}
-            75% { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,270deg) ;z-index:1; }
-            100% { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,360deg) ;z-index:1;}
+            0% {transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,0deg) translateZ(0px) ;z-index:1;}
+            25%{ transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg) translateZ(150px) ;z-index:1; }
+            50% { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg) translateZ(200px) ;z-index:1;}
+            75% { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,270deg) translateZ(150px) ;z-index:1; }
+            100% { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,360deg) translateZ(0px) ;z-index:1;}
             }
         @-webkit-keyframes shakeAnimation {
             0% {transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,0deg) ;z-index:1;}
