@@ -175,18 +175,20 @@
         .shakeAnimation { position:relative; z-index:1; bottom:0;  -webkit-overflow-scrolling: auto !important; 
             animation:shakeAnimation 1s 6; -webkit-animation:shakeAnimation 1s 6; }            
         @keyframes shakeAnimation {
-            0% {transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,0deg) translateZ(0px) ;z-index:-1;}
-            25%{ transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg) translateZ(150px) ;z-index:-1; }
-            50% { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg) translateZ(200px) ;z-index:-1;}
-            75% { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,270deg) translateZ(150px) ;z-index:-1; }
-            100% { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,360deg) translateZ(0px) ;z-index:-1;}
-            }
+            0%   { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,0deg) translateZ(0px) ;}
+            25%  { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg) translateZ(150px) ; }
+            50%  { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,360deg) translateZ(200px) ;}
+            75%  { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,540deg) translateZ(150px) ; }
+            100% { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,7200deg) translateZ(0px) ;}
+            } 
+            /*這裡的translateZ的方向與flyInText的tranalateZ不同，原因是前面已經有rotate3d(1,0,0,90deg)，以X-軸(螢幕左右方向)為軸心，
+              順時針旋轉90度，因此，原本垂直螢幕方向的z軸，被轉到銀幕平面的上下方向、而Y軸變成垂直螢幕方向(往內為正)了*/
         @-webkit-keyframes shakeAnimation {
-            0% {-webkit-transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,0deg) translateZ(0px) ;z-index:-1;}
-            25%{ -webkit-transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg) translateZ(150px) ;z-index:-1; }
-            50% { -webkit-transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg) translateZ(200px) ;z-index:-1;}
-            75% { -webkit-transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,270deg) translateZ(150px) ;z-index:-1; }
-            100% { -webkit-transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,360deg) translateZ(0px) ;z-index:-1;}
+            0%   { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,0deg) translateZ(0px) ;}
+            25%  { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg) translateZ(150px) ; }
+            50%  { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,360deg) translateZ(200px) ;}
+            75%  { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,540deg) translateZ(150px) ; }
+            100% { transform:rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,7200deg) translateZ(0px) ;}
             }
         /* cube bouncing when done */
         .bounce { position:relative;  bottom:0;   animation:bounce 1s 5; -webkit-animation:bounce 1s 5; }            
@@ -202,19 +204,23 @@
         .flyInText {
             height:90%;width:90%;
             position:absolute; text-align:center;
-            top:0vw; left:0vw; right:0vw; bottom:0vw;
+            top:0; left:0; right:0; bottom:0;
             margin:auto;
             height:2em;
-            font-weight:bolder; font-size:6vw;
+            font-weight:bolder; font-size:10vw;
             color:red; text-shadow:0 0 10px white, 0 0 30px yellow;
             z-index:5;
-            -webkit-transform: translateZ(2000px); transform: translateZ(2000px);
-            -webkit-transform-style:preserve-3d; transform-style:preserve-3d;
+            /*iOs系統無法單用z-index控制圖層前後，需用translateZ；windows系統則用z-index即可
+            translateZ(2000px)表示把圖層從螢幕表面(Z=0)往眼睛方向拉高2000px，因為魔方為300px正方體(z=-150 ~ +150)，加上選轉，
+            z軸最大值會到150 * 1.414 px，設定2000px可以絕對高於魔方的z軸高度，避免fly Text被魔方擋住*/
+            -webkit-transform: translateZ(2000px); /*iOS Browder使用webkit engine*/
+            transform: translateZ(2000px); /*; windows不須要加註前綴碼*/
+            -webkit-transform-style:preserve-3d; transform-style:preserve-3d; 
         }
         .flyInText .flyInTextXX {
             height:2em;
             position: absolute; text-align:center;
-            top:0vw; left:0vw; right:0vw; bottom:0vw;
+            top:0; left:0; right:0; bottom:0;
             margin: auto;
             opacity:0;
             z-index:5;
