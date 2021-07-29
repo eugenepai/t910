@@ -46,11 +46,16 @@
         50%  { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
         100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }}
 
-        .tbl{border:2px black solid; width:100%; height:100%; table-layout:fixed; font-family: Arial;}
-        .tbltr12{line-height:1.2em;text-align:center;font-weight:bolder;color:black}
-        .tbltr3{font-size:1em; line-height:1.2em;text-align:left;font-weight:bold;color:black;}
+        .tbl{border:2px white solid; width:100%; height:100%; table-layout:fixed; font-family: Arial;}
+        .tbltr12{line-height:1.2em;text-align:center;font-weight:bolder;color:white}
+        .tbltr3{font-size:1em; line-height:1.2em;text-align:left;font-weight:bold;color:white;}
         .imgl{vertical-align:middle; text-align:center; line-height:100%;}
         .imgp1{display:block;max-height:90%; margin:auto; padding:10% 5% 10% 5%;}
+        .imgp1Shadow1 {display:block; position:absolute; left:21.7vw; top:13.5vw; margin:auto; width:21vw;height:21vw;
+            box-shadow: 0 0 200px white; border-radius:50%; background-color:white; z-index:99;background: transparent;}
+        .imgp1Shadow2 {display:block; position:absolute; left:72vw; top:26.5vw; margin:auto; width:19vw;height:19vw;
+            box-shadow: 0 0 100px white; border-radius:50%; background-color:white; z-index:99;background: transparent;}
+       
         /*for have fun animation*/
             * {box-sizing: border-box;transition: all 0.15s ease 0s;}
             :root {
@@ -596,13 +601,13 @@
             }
     </style>
 </head>
-<body>
-<table border="1" class="tbl" id="tableShow">
+<body style="background-color:#222222;">
+<table border="1" class="tbl" id="tableShow"> 
     <thead></thead>
     <tbody>
         <tr height=5% class="tbltr12">
             <td rowspan=2 width=64% style="font-size:1.4em;">Rubik's Cube Everywhere! 
-                <span style="color:red;"> --- WCA Rules </span>
+                <span style="color:white;"> --- WCA Rules </span>
             </td>
             <td width="10%">程式名稱</td>
             <td width="18%">作者</td>
@@ -615,14 +620,14 @@
             <td>2021/7/25</td>            
         </tr>
 
-        <tr height=2% style="border:2px black solid;line-height:2em;text-align:center;">            
+        <tr height=2% style="border:2px white solid;line-height:2em;text-align:center;">            
             <td style="font-size:0.8em; font-family:serif; font-style:italic; 
                         text-align:center; line-height:1em;">
                 <a href="https://www.worldcubeassociation.org/regulations/translations/chinese-traditional/" 
-                target="_blank" title="WCA競賽規則" style="text-decoration:underline;">[WCA 競賽規則]</a>
+                target="_blank" title="WCA競賽規則" style="text-decoration:underline; color:white;">[WCA 競賽規則]</a>
                 <span>　　　　</span>
                 <a href="https://www.worldcubeassociation.org/regulations/" 
-                target="_blank" title="WCARegulations" style="text-decoration:underline;">[WCA Regulations]</a>
+                target="_blank" title="WCARegulations" style="text-decoration:underline; color:white;">[WCA Regulations]</a>
             </td>
             <td colspan=3 Class="tbltr3" style="font-size:0.5em; font-weight:normal;text-align:center;">
 				桃園高中自主學習計畫 TYSH Self-learning Project
@@ -634,6 +639,7 @@
             <td style="vertical-align:middle; text-align:center;">
                 
                 <img id="rbc" class="imgp1" width=45% src=".\image\WCA Logo 2020.svg">
+                <div class="imgp1Shadow1" width=45%></div>
                 <div class="scene">
                     <div class="word">
                         <div class="letter__wrap" style="--index: 0;">
@@ -682,7 +688,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="text-align:center; font-weight:bolder;">
+                <div style="text-align:center; font-weight:bolder; color:white">
                     世界方塊協會 World Cube Association
                 </div>
                 <br/>
@@ -697,6 +703,7 @@
                 <button class="button" onclick="location.href='rubiksGame.html'">START</button>
                 <br/><br/>
                 <img id="TYSH" class="imgp1" width=65% src=".\image\TYSH_logo.gif">
+                <div class="imgp1Shadow2" width=45%></div>
             </td>
         </tr>
     </tbody>
