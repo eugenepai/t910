@@ -779,7 +779,7 @@
             document.getElementById('gameElapsed').innerHTML = ""; 
         }
     };
-
+    // game timer
     function gameElapsedTime() {
         var currentTime = new Date();
         var eTime = (currentTime.getTime() - gameStartTime.getTime())/1000 ;
@@ -792,30 +792,30 @@
     $(function(){ 
         $("body").keydown(function(e){
             if (event.getModifierState("CapsLock")) 
-                {document.getElementById("CapsLockIsOn").innerHTML = "CapsLock: ON  /　";  }
+                 {document.getElementById("CapsLockIsOn").innerHTML = "CapsLock: ON  /　";  }
             else {document.getElementById("CapsLockIsOn").innerHTML = "";  };
 
             // listen to keyboard in 300ms, for 2-layer moves
             Layers = 1;
-            rotDegree = 90; 
-            timeWait = 250;
+            rotDegree = 90;
+            timeWait = 300;
             $("body").keydown(function(e){
                 if (e.key === "w") { Layers = 2; }
                 if (e.key === "2") { rotDegree = 180; }
-                if (e.key === "p") { Layers = 2; rotDegree = 180; }                
+                if (e.key === "p") { Layers = 2; rotDegree = 180; }
             });
             window.setTimeout(function() {
-                if (lockState === "unLocked") {                
-                    if      ( e.key === "l" && rotDegree===90 ) { push2Rotate(12,-100,Layers,X90); }
+                if (lockState === "unLocked") {
+                    if      ( e.key === "l" && rotDegree===90 ) { push2Rotate(12,-100,Layers,X90);  }
                     else if ( e.key === "L" && rotDegree===90 ) { push2Rotate(12,-100,Layers,Xn90); }
-                    else if ( e.key === "r" && rotDegree===90 ) { push2Rotate(12,100,Layers,Xn90); }
-                    else if ( e.key === "R" && rotDegree===90 ) { push2Rotate(12,100,Layers,X90);  }
+                    else if ( e.key === "r" && rotDegree===90 ) { push2Rotate(12,100,Layers,Xn90);  }
+                    else if ( e.key === "R" && rotDegree===90 ) { push2Rotate(12,100,Layers,X90);   }
                     else if ( e.key === "u" && rotDegree===90 ) { push2Rotate(14,100,Layers,Zn90);  }
                     else if ( e.key === "U" && rotDegree===90 ) { push2Rotate(14,100,Layers,Z90);   }
                     else if ( e.key === "d" && rotDegree===90 ) { push2Rotate(14,-100,Layers,Z90);  }
                     else if ( e.key === "D" && rotDegree===90 ) { push2Rotate(14,-100,Layers,Zn90); }
-                    else if ( e.key === "f" && rotDegree===90 ) { push2Rotate(13,100,Layers,Yn90); }
-                    else if ( e.key === "F" && rotDegree===90 ) { push2Rotate(13,100,Layers,Y90);  }
+                    else if ( e.key === "f" && rotDegree===90 ) { push2Rotate(13,100,Layers,Yn90);  }
+                    else if ( e.key === "F" && rotDegree===90 ) { push2Rotate(13,100,Layers,Y90);   }
                     else if ( e.key === "b" && rotDegree===90 ) { push2Rotate(13,-100,Layers,Y90);  }
                     else if ( e.key === "B" && rotDegree===90 ) { push2Rotate(13,-100,Layers,Yn90); }
                     
@@ -833,9 +833,9 @@
                     else if ( e.key === "z" && rotDegree===90 ) { push2Rotate(13,100,3,Yn90);  }
                     else if ( e.key === "Z" && rotDegree===90 ) { push2Rotate(13,-100,3,Y90);  }
                   
-                    else if ( e.key === "x" && rotDegree===180 )     { push2Rotate(12,-100,3,X180); }                   
-                    else if ( e.key === "y" && rotDegree===180 )     { push2Rotate(14,-100,3,Z180); }                  
-                    else if ( e.key === "z" && rotDegree===180 )     { push2Rotate(13,-100,3,Y180); }
+                    else if ( e.key === "x" && rotDegree===180 ) { push2Rotate(12,-100,3,X180); }                   
+                    else if ( e.key === "y" && rotDegree===180 ) { push2Rotate(14,-100,3,Z180); }                  
+                    else if ( e.key === "z" && rotDegree===180 ) { push2Rotate(13,-100,3,Y180); }
 
                 };
             }, timeWait);
