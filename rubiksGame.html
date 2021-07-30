@@ -14,7 +14,7 @@
         /* table head setting*/
         .tbl {border:2px white solid; width:100%; height:100%; table-layout:fixed; font-family: Arial;}
         .tbltr12 {text-align:center; font-weight:bolder;color:white}
-        .tbltr3 {font-size:1em; line-height:1em;text-align:center;font-weight:bold;color:white;}
+        .tbltr3 {font-size:1.5vw; line-height:1.5vw;text-align:center;font-weight:bold;color:white;}
         /*Game control button setting*/
         .plainCtrl {color:black; background-color:lightgray; border: 2px solid black; border-radius:5px; 
                     width:6em; height:2.5em;  }
@@ -32,8 +32,8 @@
         .O-CW   {background: -webkit-linear-gradient(left,white,orange); }
         .Y-CCW  {background: -webkit-linear-gradient(right,white,yellow); }
         .Y-CW   {background: -webkit-linear-gradient(left,white,yellow); }
-        .btHd {color:white; font-size:0.8em; font-weight:bold; vertical-align:middle; text-align:center; margin:5%; }
-        .subTitle {font-size:0.8em; font-weight:bold; color:white;}
+        .btHd {color:white; font-size:1.2vw; font-weight:bold; vertical-align:middle; text-align:center; margin:5%; }
+        .subTitle {font-size:1.2vw; font-weight:bold; color:white;}
         .borderTop {border: 1px white solid; border-width:1px 0 0 0; }
         .centerText {text-align:center; }
         .rightText {text-align:right; }
@@ -254,7 +254,7 @@
         <thead></thead>
         <tbody>
             <tr height=15% class="tbltr12">
-                <td colspan=3 rowspan=2 width=60% style="font-size:1.4em; text-align:center;">
+                <td colspan=3 rowspan=2 width=60% style="font-size:2.1vw; text-align:center;">
                     Rubik's Cube Everywhere! 
                 <span style="color:white;"> --- WCA Rules </span>
                 </td>
@@ -262,7 +262,7 @@
                 <td width="12%">作者</td>   
                 <td width="12%">日期</td>            
             </tr>
-            <tr height=5% class="tbltr12" style="font-size:0.8em;font-weight:normal;line-height:0.9em;">
+            <tr height=5% class="tbltr12" style="font-size:1.2vw;font-weight:normal;line-height:1.35vw;">
                 <td>t9-08.py</td>   <td>桃園高中 117班<br/>白昕宸</td><td>2021/8/1</td>            
             </tr>
             <tr height=2% style="border:2px white solid;line-height:2em;text-align:center;">            
@@ -276,8 +276,8 @@
                     <button  class="roundEdge" style="margin:5px;" onclick="location.href='howToPlay.html'">
                         How To Play
                     </button>
-                    <div style="color:yellow; font-size:1.2em; float:right; font-weight:bold;" id="gameElapsed"></div>
-                    <div style="color:yellow; font-size:1.2em; float:right; font-weight:bold;" id="CapsLockIsOn"></div>
+                    <div style="color:yellow; font-size:1.8vw; float:right; font-weight:bold;" id="gameElapsed"></div>
+                    <div style="color:yellow; font-size:1.8vw; float:right; font-weight:bold;" id="CapsLockIsOn"></div>
                     
                     <!-- ===== Rubik's cube area : START ===== -->
                     <div id="cube" class="cubeClass">
@@ -422,7 +422,7 @@
                     </div>
                     <!-- ===== Rubik's cube area : END ===== -->
                     <section></section>
-                    <div id="solvingStepsId" height=2em style="font-size:0.5em;color:white; overflow:auto;">                        
+                    <div id="solvingStepsId" height=2em style="font-size:0.75vw;color:white; overflow:auto;">                        
                         ※
                     </div>
                 </td>
@@ -574,7 +574,7 @@
                 </td>
             </tr>
         </tbody>
-    </table>                            
+    </table>
 <!-- ************************** javascript & jQuery ********************************** -->
 <script>
     // define quaterion parameter of matrix3d transform
