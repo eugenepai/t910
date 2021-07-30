@@ -248,8 +248,8 @@
         }
     </style>
 </head>
-
-<body style="background-color:#222222;">    
+<body style="background-color:#222222;">
+    
     <table id="mainTable" border="1" class="tbl">
         <thead></thead>
         <tbody>
@@ -421,9 +421,9 @@
                         </div>
                     </div>
                     <!-- ===== Rubik's cube area : END ===== -->
-                    <section></section>
-                    <div id="solvingStepsId" height=2em style="font-size:0.5em;color:white; overflow:auto;">                        
-                        ※
+                    <div style="font-size:0.5em;color:gray;position:relative; top:0px;left:0px;float:left; width:80%;">
+                        <section></section>
+                        ※          ※          ※
                     </div>
                 </td>
                 <td colspan=3 rowspan=15>
@@ -573,9 +573,12 @@
                     <!-- ===== Game control area: end ===== -->
                 </td>
             </tr>
+                      
         </tbody>
-    </table>                            
-<!-- ************************** javascript & jQuery ********************************** -->
+
+    </table>
+                            
+<!-- **************************javascript & jQuery ********************************** -->
 <script>
     // define quaterion parameter of matrix3d transform
     X90=[1,0,0,0,   0,0,-1,0,   0,1,0,0,    0,0,0,1];   Xn90=[1,0,0,0,   0,0,1,0,    0,-1,0,0,   0,0,0,1];
@@ -589,9 +592,8 @@
     // get major DOM Elements
     var body = $('body');
     var cube = $('#cube');
-    var solvingStepsList = "MoveSteps:<br/>";
 
-    // All Cubic-Pieces List
+    //All Cubes pieces List
     cubeList = ['#Cube01','#Cube02','#Cube03',  '#Cube04','#Cube05','#Cube06',  '#Cube07','#Cube08','#Cube09',
                 '#Cube11','#Cube12','#Cube13',  '#Cube14','#Cube15','#Cube16',  '#Cube17','#Cube18','#Cube19',
                 '#Cube21','#Cube22','#Cube23',  '#Cube24','#Cube25','#Cube26',  '#Cube27','#Cube28','#Cube29'];
@@ -602,8 +604,7 @@
     ETM =0;
     function push2Rotate(XYZ,pos,rotLayers,rot){
         if (lockState != "Locked") {
-            lockState = "Locked";
-            solvingSteps(XYZ,pos,rotLayers,rot);
+            lockState = "Locked";        
             if (rotLayers !=3 ) { OBTM++ };
             $('#OBTM').text(" OBTM = " + OBTM + " 次" );
             ETM++
@@ -635,43 +636,10 @@
                 });
                 tempDiv.remove();
                 lockState = "unLocked";
-                
                 doneCheck();
             });
         }        
     };
-    function solvingSteps(XYZ,pos,rotLayers,rot) {
-        if (rotLayers !=3) {            
-            var CodesMoveStep = {
-                "12,-100,1,X90":"L", "12,-100,1,Xn90": "L'", "12,100,1,Xn90":"R", "12,100,1,X90":"R'",
-                "14,100,1,Zn90":"U", "14,100,1,Z90":"U'", "14,-100,1,Z90":"D", "14,-100,1,Zn90":"D'",
-                "13,100,1,Yn90":"F", "13,100,1,Y90":"F'", "13,-100,1,Y90":"B", "13,-100,1,Yn90":"B'",
-
-                "12,-100,1,X180":"L2", "12,100,1,X180":"R2", "14,100,1,Z180":"U2", "14,-100,1,Z180":"D2",
-                "13,100,1,Y180":"F2", "13,-100,1,Y180":"B2",
-
-                "12,-100,2,X90":"Lw", "12,-100,2,Xn90":"Lw'", "12,100,2,Xn90":"Rw", "12,100,2,X90":"Rw'",
-                "14,100,2,Zn90":"Uw", "14,100,2,Z90":"Uw'", "14,-100,2,Z90":"Dw", "14,-100,2,Zn90":"Dw'",
-                "13,100,2,Yn90":"Fw", "13,100,2,Y90":"Fw'", "13,-100,2,Y90":"Bw", "13,-100,2,Yn90":"Bw'",
-
-                "12,-100,2,X180":"Lw2", "12,100,2,X180":"Rw2", "14,100,2,Z180":"Uw2", "14,-100,2,Z180":"Dw2",
-                "13,100,2,Y180":"Fw2", "13,-100,2,Y180":"Bw2",
-
-                "1,0,0,0,0,0,-1,0,0,1,0,0,0,0,0,1":"X90",   "1,0,0,0,0,0,1,0,0,-1,0,0,0,0,0,1":"Xn90",
-                "0,0,1,0,0,1,0,0,-1,0,0,0,0,0,0,1":"Y90",   "0,0,-1,0,0,1,0,0,1,0,0,0,0,0,0,1":"Yn90",
-                "0,-1,0,0,1,0,0,0,0,0,1,0,0,0,0,1":"Z90",   "0,1,0,0,-1,0,0,0,0,0,1,0,0,0,0,1":"Zn90",
-
-                "1,0,0,0,0,-1,0,0,0,0,-1,0,0,0,0,1":"X180",  "-1,0,0,0,0,1,0,0,0,0,-1,0,0,0,0,1":"Y180",
-                "-1,0,0,0,0,-1,0,0,0,0,1,0,0,0,0,1":"Z180"
-            };
-            var thisMoveKey = XYZ + "," + pos + "," + rotLayers + "," + CodesMoveStep[rot];
-            // alert(rot);
-            // alert(thisMoveKey);
-            var thisMoveCode = CodesMoveStep[thisMoveKey] + " ";
-            solvingStepsList += thisMoveCode;
-            document.getElementById("solvingStepsId").innerHTML = solvingStepsList;
-        }
-    }
     function doneCheck() {
         doneRC = "solved";
         $.each(cubeList, function(index, item) {
@@ -1014,7 +982,7 @@
     }
     document.getElementById("faceMoveControl").addEventListener("touchstart",touchDownEvent2Layer,false);
     document.getElementById("faceMoveControl").addEventListener("touchmove",touchUpEvent2Layer,false);
-//------- animation by anime.js --------------------------------------------------------------------------
+//------- animation by anime.js --------------------------------------------------------------------------------
     function flyInText() {
         // $("#mainTable").append($("<div></div>").addClass("flyInText"));
         $("body").append($("<div></div>").addClass("flyInText"));
@@ -1056,7 +1024,7 @@
                     }
                 });
     };
-    // ----------------- buuble animatioin ---------------------------------------------------------------
+    // ----------------- buuble animatioin ----------------------------Math.min(100, Math.max(0, number))
     bubbleCounter = 1;
     function bubbleGenerator() {        
         const section = document.querySelector('section');
