@@ -13,7 +13,7 @@
   - (WCA version) python/flask + html/css/javascript：改用html/css繪圖、javascript控制、flask製作webapp，heroku上發布 [[→ t9-06]](https://t906.herokuapp.com) 
 #### on Github
   - (WCA version) html+css+javascript版：webapp改成static html，放在 github pages上 [[currentProject t9-07]](https://eugenepai.github.io/t907/)
-  - (WCA version / Dark theme) Dark theme of t9-07 with game timer and congratulation animation when solved [[Dark Theme t9-08]](https://eugenepai.github.io/t908/)
+  - (WCA version / Dark theme) Dark theme version of t9-07,  with added game timer and congratulation animation when RC is solved [[Dark Theme t9-08]](https://eugenepai.github.io/t908/)
 
 ## WCA  / World Cube Association / 世界方塊協會
 - [WCA競賽規則](https://www.worldcubeassociation.org/regulations/translations/chinese-traditional/)
