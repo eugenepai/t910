@@ -596,13 +596,6 @@
                 '#Cube11','#Cube12','#Cube13',  '#Cube14','#Cube15','#Cube16',  '#Cube17','#Cube18','#Cube19',
                 '#Cube21','#Cube22','#Cube23',  '#Cube24','#Cube25','#Cube26',  '#Cube27','#Cube28','#Cube29'];
 
-    cubeListFace = [['#Cube01','#Cube02','#Cube03', '#Cube04','#Cube05','#Cube06',  '#Cube07','#Cube08','#Cube09'],
-                    ['#Cube01','#Cube02','#Cube03', '#Cube11','#Cube12','#Cube13',  '#Cube21','#Cube22','#Cube23'],
-                    ['#Cube07','#Cube08','#Cube09', '#Cube17','#Cube18','#Cube19',  '#Cube27','#Cube28','#Cube29'],
-                    ['#Cube21','#Cube22','#Cube23', '#Cube24','#Cube25','#Cube26',  '#Cube27','#Cube28','#Cube29'],
-                    ['#Cube01','#Cube04','#Cube07', '#Cube11','#Cube14','#Cube17',  '#Cube21','#Cube24','#Cube27'],
-                    ['#Cube03','#Cube06','#Cube09', '#Cube13','#Cube16','#Cube19',  '#Cube23','#Cube26','#Cube29']];
-
 //==========================  Rotation Moves =============================================================
     //  push cube pieces to a temp div (cube face), rotate it, then push back after rotation
     OBTM = 0;
@@ -681,17 +674,16 @@
     }
     function doneCheck() {
         doneRC = "solved";
-        for (var i = 0; i < 6; i++) {
-            mSum12=0, mSum13=0, mSum14=0;
-            m12=0, m13=0, m14=0;
-            $.each(cubeListFace[i], function(index, item) {
-                var tempArr = $(item).css('-transform').split(',');
-                mSum12 += parseInt(tempArr[12],10); m12=parseInt(tempArr[12],10);
-                mSum13 += parseInt(tempArr[13],10); m13=parseInt(tempArr[13],10);
-                mSum14 += parseInt(tempArr[14],10); m14=parseInt(tempArr[14],10);
-            });
-               if ( mSum12 != m12*9 && mSum13 != m13*9 && mSum14 != m14*9) { doneRC = "notYet"; };
-        }
+        $.each(cubeList, function(index, item) {
+            var tempArr = $(item).css('-transform').split(',');
+            $("#cube").append($("<div></div>").attr('id','doneCheckTemp').addClass("class"+item.substring(1,7)));
+            if ( $('#doneCheckTemp').css('-transform')!=$(item).css('-transform') ) {
+                doneRC = "notYet";
+                $('#doneCheckTemp').remove();
+                return false;
+            }
+            $('#doneCheckTemp').remove();   
+        });
         if (doneRC === "solved" && gameTimer === "timerOn" ) {            
             clearTimeout(eventGameElapsedTime);
             document.getElementById('cube').classList.add("shakeAnimation");
