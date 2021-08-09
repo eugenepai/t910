@@ -596,12 +596,12 @@
                 '#Cube11','#Cube12','#Cube13',  '#Cube14','#Cube15','#Cube16',  '#Cube17','#Cube18','#Cube19',
                 '#Cube21','#Cube22','#Cube23',  '#Cube24','#Cube25','#Cube26',  '#Cube27','#Cube28','#Cube29'];
 
-    cubeListFace = [['#01U','#02U','#03U', '#04U','#05U','#06U',  '#07U','#08U','#09U'],
-                    ['#01F','#02F','#03F', '#11F','#12F','#13F',  '#21F','#22F','#23F'],
-                    ['#07B','#08B','#09B', '#17B','#18B','#19B',  '#27B','#28B','#29B'],
-                    ['#21D','#22D','#23D', '#24D','#25D','#26D',  '#27D','#28D','#29D'],
-                    ['#01L','#04L','#07L', '#11L','#14L','#17L',  '#21L','#24L','#27L'],
-                    ['#03R','#06R','#09R', '#13R','#16R','#19R',  '#23R','#26R','#29R']];
+    cubeListFace = [['#Cube01','#Cube02','#Cube03', '#Cube04','#Cube05','#Cube06',  '#Cube07','#Cube08','#Cube09'],
+                    ['#Cube01','#Cube02','#Cube03', '#Cube11','#Cube12','#Cube13',  '#Cube21','#Cube22','#Cube23'],
+                    ['#Cube07','#Cube08','#Cube09', '#Cube17','#Cube18','#Cube19',  '#Cube27','#Cube28','#Cube29'],
+                    ['#Cube21','#Cube22','#Cube23', '#Cube24','#Cube25','#Cube26',  '#Cube27','#Cube28','#Cube29'],
+                    ['#Cube01','#Cube04','#Cube07', '#Cube11','#Cube14','#Cube17',  '#Cube21','#Cube24','#Cube27'],
+                    ['#Cube03','#Cube06','#Cube09', '#Cube13','#Cube16','#Cube19',  '#Cube23','#Cube26','#Cube29']];
 
 //==========================  Rotation Moves =============================================================
     //  push cube pieces to a temp div (cube face), rotate it, then push back after rotation
@@ -685,13 +685,10 @@
             mSum12=0, mSum13=0, mSum14=0;
             m12=0, m13=0, m14=0;
             $.each(cubeListFace[i], function(index, item) {
-                $("#cube").append($("<div></div>").attr('id','foo').addClass("fooClass"));
-                $("#foo").css('-transform',$(item).parent().css('-transform') + $(item).css('-transform') );
-                var tempArr = $("#foo").css('-transform').split(',');
+                var tempArr = $(item).css('-transform').split(',');
                 mSum12 += parseInt(tempArr[12],10); m12=parseInt(tempArr[12],10);
                 mSum13 += parseInt(tempArr[13],10); m13=parseInt(tempArr[13],10);
                 mSum14 += parseInt(tempArr[14],10); m14=parseInt(tempArr[14],10);
-                $('#foo').remove();
             });
                if ( mSum12 != m12*9 && mSum13 != m13*9 && mSum14 != m14*9) { doneRC = "notYet"; };
         }
@@ -701,17 +698,17 @@
             gameTimer = "timerOff";
             startBubbling();
             flyInText();
-            // $('.flyInText').on( 'transitionend webkitTransitionEnd',function() {
-            //     alert("remove anime");
-            //     anime.remove( ".flyInText .flyText1" );
-            //     anime.remove( ".flyInText .flyText2" );
-            //     anime.remove( ".flyInText .flyText3" );
-            //     anime.remove( ".flyInText .flyText4" );
-            //     anime.remove( ".flyInText .flyText5" );
-            //     anime.remove( ".flyInText .flyText6" );
-            //     anime.remove( ".flyInText" );
-            //     $('.flyInText').remove();
-            // });
+            $('.flyInText').on( 'transitionend webkitTransitionEnd',function() {
+                alert("remove anime");
+                anime.remove( ".flyInText .flyText1" );
+                anime.remove( ".flyInText .flyText2" );
+                anime.remove( ".flyInText .flyText3" );
+                anime.remove( ".flyInText .flyText4" );
+                anime.remove( ".flyInText .flyText5" );
+                anime.remove( ".flyInText .flyText6" );
+                anime.remove( ".flyInText" );
+                $('.flyInText').remove();
+            });
         }
     }
 //===============================  Start Mode  ================================================
