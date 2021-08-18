@@ -630,14 +630,14 @@
             
             // transition speed setting
             var transitionSpeedSetting = "transform " + $("#rotSpeed").val() + "ms linear" ;
-            tempDiv.css("-transition", transitionSpeedSetting);
+            tempDiv.css("transition", transitionSpeedSetting);
 
             // update cube css to rotate, then back to original div (listen to transitioned event)        
-            tempDiv.css("-transform",tempDiv.css("-transform") + "matrix3d(" +rot+ ")");
+            tempDiv.css("transform",tempDiv.css("transform") + "matrix3d(" +rot+ ")");
             tempDiv.on( 'transitionend webkitTransitionEnd',function() {
                 var tempDivChild = tempDiv.children("div");
                 $.each(tempDivChild, function(index, item) {             
-                    $(item).css('-transform', tempDiv.css('-transform') + $(item).css('-transform'));
+                    $(item).css('transform', tempDiv.css('transform') + $(item).css('transform'));
                     $(item).appendTo(cube);
                 });
                 tempDiv.remove();
@@ -693,7 +693,8 @@
                 mSum14 += parseInt(tempArr[14],10); m14=parseInt(tempArr[14],10);
                 $('#foo').remove();
             });
-               if ( mSum12 != m12*9 && mSum13 != m13*9 && mSum14 != m14*9) { doneRC = "notYet"; };
+            
+            if ( mSum12 != m12*9 && mSum13 != m13*9 && mSum14 != m14*9) { doneRC = "notYet"; return };
         }
         if (doneRC === "solved" && gameTimer === "timerOn" ) {            
             clearTimeout(eventGameElapsedTime);
