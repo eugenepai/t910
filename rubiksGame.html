@@ -631,7 +631,6 @@
             // transition speed setting
             var transitionSpeedSetting = "all " + $("#rotSpeed").val() + "ms linear" ;
             tempDiv.css("-transition", transitionSpeedSetting);
-            tempDiv.css("-webkit-transition", transitionSpeedSetting);
 
             // update cube css to rotate, then back to original div (listen to transitioned event)        
             tempDiv.css("-transform",tempDiv.css("-transform") + "matrix3d(" +rot+ ")");
