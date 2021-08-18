@@ -45,11 +45,11 @@
             -webkit-perspective:none;
             -webkit-transform-style: preserve-3d;
             -webkit-transform: rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) ;
-            -webkit-transition: all 350ms ease-in-out;
+            -webkit-transition: all 350ms linear;
             perspective:none;
             transform-style: preserve-3d;
             transform: rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) ;
-            transition: all 350ms ease-in-out; }
+            transition: all 350ms linear; }
         .cubeClass div {
             position:absolute; z-index:1;
             -webkit-overflow-scrolling: auto !important;
@@ -164,9 +164,9 @@
                        transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   +100,   -100,   -100,   1);}
         /* temp div for rotation purpose */
         .tempClass {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,  0,0,0,1);
-                    -webkit-transition: all 350ms ease-in-out; 
+                    -webkit-transition: all 350ms linear; 
                     transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,  0,0,0,1);
-                    transition: all 350ms ease-in-out;  }
+                    transition: all 350ms linear;  }
         .fooClass {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,  0,0,0,1);
                     -webkit-transition: none; 
                     transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,  0,0,0,1);
@@ -629,7 +629,7 @@
             });
             
             // transition speed setting
-            var transitionSpeedSetting = "all " + $("#rotSpeed").val() + "ms ease-in-out" ;
+            var transitionSpeedSetting = "all " + $("#rotSpeed").val() + "ms linear" ;
             tempDiv.css("-transition", transitionSpeedSetting);
 
             // update cube css to rotate, then back to original div (listen to transitioned event)        
