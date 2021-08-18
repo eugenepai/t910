@@ -630,14 +630,19 @@
             
             // transition speed setting
             var transitionSpeedSetting = "all " + $("#rotSpeed").val() + "ms ease-out" ;
-            tempDiv.css("-transition", transitionSpeedSetting);
+            tempDiv.css("transition", transitionSpeedSetting);
+            tempDiv.css("-webkit-transition", transitionSpeedSetting);
 
             // update cube css to rotate, then back to original div (listen to transitioned event)        
-            tempDiv.css("-transform",tempDiv.css("-transform") + "matrix3d(" +rot+ ")");
+            tempDiv.css("transform",tempDiv.css("transform") + "matrix3d(" +rot+ ")");
+            tempDiv.css("-webkit-transform",tempDiv.css("-webkit-transform") + "matrix3d(" +rot+ ")");
+
             tempDiv.on( 'transitionend webkitTransitionEnd',function() {
                 var tempDivChild = tempDiv.children("div");
-                $.each(tempDivChild, function(index, item) {             
-                    $(item).css('-transform', tempDiv.css('-transform') + $(item).css('-transform'));
+                $.each(tempDivChild, function(index, item) {
+                    $(item).css('transform', tempDiv.css('transform') + $(item).css('transform'));
+                    $(item).css('-webkit-transform', tempDiv.css('-webkit-transform') + $(item).css('-webkit-transform'));
+                    
                     $(item).appendTo(cube);
                 });
                 tempDiv.remove();
