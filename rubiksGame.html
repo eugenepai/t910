@@ -45,11 +45,11 @@
             -webkit-perspective:none;
             -webkit-transform-style: preserve-3d;
             -webkit-transform: rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) ;
-            -webkit-transition: all 350ms ease-out;
+            -webkit-transition: all 350ms linear;
             perspective:none;
             transform-style: preserve-3d;
             transform: rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) ;
-            transition: all 350ms ease-out; }
+            transition: all 350ms linear; }
         .cubeClass div {
             position:absolute; z-index:1;
             -webkit-overflow-scrolling: auto !important;
@@ -164,9 +164,9 @@
                        transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   +100,   -100,   -100,   1);}
         /* temp div for rotation purpose */
         .tempClass {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,  0,0,0,1);
-                    -webkit-transition: all 350ms ease-out; 
+                    -webkit-transition: all 350ms linear; 
                     transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,  0,0,0,1);
-                    transition: all 350ms ease-out;  }
+                    transition: all 350ms linear;  }
         .fooClass {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,  0,0,0,1);
                     -webkit-transition: none; 
                     transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,  0,0,0,1);
@@ -230,7 +230,7 @@
             border-radius: 50%;
             box-shadow: inset 0 0 10px rgb(255, 255, 255, 0.5);
             bottom: -20px;
-            animation: animateBubbling 2s ease-out infinite;
+            animation: animateBubbling 2s linear infinite;
             pointer-events: none;
         }
         section span:before{
@@ -629,20 +629,18 @@
             });
             
             // transition speed setting
-            var transitionSpeedSetting = "all " + $("#rotSpeed").val() + "ms ease-out" ;
-            tempDiv.css("transition", transitionSpeedSetting);
+            var transitionSpeedSetting = "all " + $("#rotSpeed").val() + "ms linear" ;
+            tempDiv.css("-transition", transitionSpeedSetting);
             tempDiv.css("-webkit-transition", transitionSpeedSetting);
 
             // update cube css to rotate, then back to original div (listen to transitioned event)        
-            tempDiv.css("transform",tempDiv.css("transform") + "matrix3d(" +rot+ ")");
+            tempDiv.css("-transform",tempDiv.css("-transform") + "matrix3d(" +rot+ ")");
             tempDiv.css("-webkit-transform",tempDiv.css("-webkit-transform") + "matrix3d(" +rot+ ")");
 
             tempDiv.on( 'transitionend webkitTransitionEnd',function() {
                 var tempDivChild = tempDiv.children("div");
-                $.each(tempDivChild, function(index, item) {
-                    $(item).css('transform', tempDiv.css('transform') + $(item).css('transform'));
-                    $(item).css('-webkit-transform', tempDiv.css('-webkit-transform') + $(item).css('-webkit-transform'));
-                    
+                $.each(tempDivChild, function(index, item) {             
+                    $(item).css('-transform', tempDiv.css('-transform') + $(item).css('-transform'));
                     $(item).appendTo(cube);
                 });
                 tempDiv.remove();
@@ -698,7 +696,7 @@
                 mSum14 += parseInt(tempArr[14],10); m14=parseInt(tempArr[14],10);
                 $('#foo').remove();
             });
-               if ( mSum12 != m12*9 && mSum13 != m13*9 && mSum14 != m14*9) { doneRC = "notYet"; return };
+               if ( mSum12 != m12*9 && mSum13 != m13*9 && mSum14 != m14*9) { doneRC = "notYet"; };
         }
         if (doneRC === "solved" && gameTimer === "timerOn" ) {            
             clearTimeout(eventGameElapsedTime);
@@ -706,6 +704,17 @@
             gameTimer = "timerOff";
             startBubbling();
             flyInText();
+            // $('.flyInText').on( 'transitionend webkitTransitionEnd',function() {
+            //     alert("remove anime");
+            //     anime.remove( ".flyInText .flyText1" );
+            //     anime.remove( ".flyInText .flyText2" );
+            //     anime.remove( ".flyInText .flyText3" );
+            //     anime.remove( ".flyInText .flyText4" );
+            //     anime.remove( ".flyInText .flyText5" );
+            //     anime.remove( ".flyInText .flyText6" );
+            //     anime.remove( ".flyInText" );
+            //     $('.flyInText').remove();
+            // });
         }
     }
 //===============================  Start Mode  ================================================
