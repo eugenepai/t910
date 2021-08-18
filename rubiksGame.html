@@ -693,7 +693,7 @@
                 mSum14 += parseInt(tempArr[14],10); m14=parseInt(tempArr[14],10);
                 $('#foo').remove();
             });
-               if ( mSum12 != m12*9 && mSum13 != m13*9 && mSum14 != m14*9) { doneRC = "notYet"; };
+               if ( mSum12 != m12*9 && mSum13 != m13*9 && mSum14 != m14*9) { doneRC = "notYet"; return };
         }
         if (doneRC === "solved" && gameTimer === "timerOn" ) {            
             clearTimeout(eventGameElapsedTime);
@@ -701,17 +701,6 @@
             gameTimer = "timerOff";
             startBubbling();
             flyInText();
-            // $('.flyInText').on( 'transitionend webkitTransitionEnd',function() {
-            //     alert("remove anime");
-            //     anime.remove( ".flyInText .flyText1" );
-            //     anime.remove( ".flyInText .flyText2" );
-            //     anime.remove( ".flyInText .flyText3" );
-            //     anime.remove( ".flyInText .flyText4" );
-            //     anime.remove( ".flyInText .flyText5" );
-            //     anime.remove( ".flyInText .flyText6" );
-            //     anime.remove( ".flyInText" );
-            //     $('.flyInText').remove();
-            // });
         }
     }
 //===============================  Start Mode  ================================================
