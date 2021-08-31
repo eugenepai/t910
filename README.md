@@ -21,7 +21,8 @@
 
 ## How to Play
 - Check out [[here]](https://eugenepai.github.io/t907/howToPlay.html)
-- need help to solve Rubik's Cube? [[Hint]](https://eugenepai.github.io/t908/reference/RC_SolveAlgorithm.jpg) [[reference]] (https://cubesolve.com/)
+- need help to solve Rubik's Cube? [[Hint]](https://eugenepai.github.io/t908/reference/RC_SolveAlgorithm.jpg) 
+- very useful reference [[here]](https://cubesolve.com/)
 
 ## Support or Contact
 
