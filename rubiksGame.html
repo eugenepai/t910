@@ -80,30 +80,30 @@
         */
         /*cube face backside black setting */
         .fsUp:after   {transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,-0.5,1);border: solid black 5px; border-radius:0px; 
-                        z-index:-1;content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;}
+                        content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;}
         .fsDown:after {transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,-0.5,1);border: solid black 5px; border-radius:0px; 
-                        z-index:-1;content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;} 
+                        content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;} 
         .fsFront:after{transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,-0.5,1);border: solid black 5px; border-radius:0px; 
-                        z-index:-1;content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;} 
+                        content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;} 
         .fsBack:after {transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,-0.5,1);border: solid black 5px; border-radius:0px; 
-                        z-index:-1;content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;}
+                        content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;}
         .fsLeft:after {transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,-0.5,1);border: solid black 5px; border-radius:0px; 
-                        z-index:-1;content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;}
+                        content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;}
         .fsRight:after{transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,-0.5,1);border: solid black 5px; border-radius:0px; 
-                       z-index:-1; content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;}
+                       content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;}
         /*cube face setting */
         .fsUp   {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,+50,1);
-                         transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,+50,1); } /* X轉0, Z移+50 */
+                  z-index:999,zindex:999;       transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,+50,1); } /* X轉0, Z移+50 */
         .fsDown {-webkit-transform: matrix3d(1,0,0,0,   0,-1,0,0,  0,0,-1,0,  0,0,-50,1);
-                         transform: matrix3d(1,0,0,0,   0,-1,0,0,  0,0,-1,0,  0,0,-50,1); } /* X轉180, Z移-50 */
+                  z-index:999,zindex:999;       transform: matrix3d(1,0,0,0,   0,-1,0,0,  0,0,-1,0,  0,0,-50,1); } /* X轉180, Z移-50 */
         .fsFront{-webkit-transform: matrix3d(1,0,0,0,   0,0,-1,0,  0,1,0,0,   0,+50,0,1);
-                         transform: matrix3d(1,0,0,0,   0,0,-1,0,  0,1,0,0,   0,+50,0,1); } /* X轉+90, Y移+50 */
+                  z-index:999,zindex:999;       transform: matrix3d(1,0,0,0,   0,0,-1,0,  0,1,0,0,   0,+50,0,1); } /* X轉+90, Y移+50 */
         .fsBack {-webkit-transform: matrix3d(1,0,0,0,   0,0,1,0,   0,-1,0,0,  0,-50,0,1);
-                         transform: matrix3d(1,0,0,0,   0,0,1,0,   0,-1,0,0,  0,-50,0,1); } /* X轉-90, Y移-50 */
+                  z-index:999,zindex:999;       transform: matrix3d(1,0,0,0,   0,0,1,0,   0,-1,0,0,  0,-50,0,1); } /* X轉-90, Y移-50 */
         .fsLeft {-webkit-transform: matrix3d(0,0,1,0,   0,1,0,0,   -1,0,0,0,  -50,0,0,1);
-                         transform: matrix3d(0,0,1,0,   0,1,0,0,   -1,0,0,0,  -50,0,0,1); } /* Y轉+90, X移-50 */
+                z-index:999,zindex:999;         transform: matrix3d(0,0,1,0,   0,1,0,0,   -1,0,0,0,  -50,0,0,1); } /* Y轉+90, X移-50 */
         .fsRight{-webkit-transform: matrix3d(0,0,-1,0,  0,1,0,0,   1,0,0,0,   +50,0,0,1); 
-                         transform: matrix3d(0,0,-1,0,  0,1,0,0,   1,0,0,0,   +50,0,0,1); } /* Y轉-90, X移+50 */
+                 z-index:999,zindex:999;        transform: matrix3d(0,0,-1,0,  0,1,0,0,   1,0,0,0,   +50,0,0,1); } /* Y轉-90, X移+50 */
 
         /* 1st_Layer of 27 unit cubes*/
         .classCube01 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   -100,   +100,   +100,   1);
