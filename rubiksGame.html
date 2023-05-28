@@ -80,22 +80,7 @@
         Y180=[-1,0,0,0,  0,1,0,0,    0,0,-1,0,  0,0,0,1];
         Z180=[-1,0,0,0,  0,-1,0,0,   0,0,1,0,   0,0,0,1];
         */
-       
-        /*cube face backside black setting */
-        /*
-        .fsUp:after   {transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,-0.5,1);border: solid green 5px; border-radius:0px; 
-                        content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;}
-        .fsDown:after {transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,-0.5,1);border: solid green 5px; border-radius:0px; 
-                        content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;} 
-        .fsFront:after{transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,-0.5,1);border: solid green 5px; border-radius:0px; 
-                        content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;} 
-        .fsBack:after {transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,-0.5,1);border: solid green 5px; border-radius:0px; 
-                        content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;}
-        .fsLeft:after {transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,-0.5,1);border: solid green 5px; border-radius:0px; 
-                        content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;}
-        .fsRight:after{transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,-0.5,1);border: solid green 5px; border-radius:0px; 
-                       content:''; background-color: black; width:103%; height:103%; box-sizing: border-box; position:absolute;}
-        */
+        
         /*cube face setting */
         .fsUp   {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,+50,1);
                   z-index:999,zindex:999;       transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,+50,1); } /* X轉0, Z移+50 */
@@ -130,24 +115,24 @@
         .classCube09 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   +100,   -100,   +100,   1);
                               transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   +100,   -100,   +100,   1);}
         /* 2nd_Layer of 27 unit cubes*/
-        .classCube11 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   -100,   +100,   0.0001,   1);
-                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   -100,   +100,   0.0001,   1);}
-        .classCube12 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,      +100,   0.0001,   1);
-                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,      +100,   0.0001,   1);}
-        .classCube13 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   +100,   +100,   0.0001,   1);
-                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   +100,   +100,   0.0001,   1);}
-        .classCube14 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   -100,   0,      0.0001,   1);
-                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   -100,   0,      0.0001,   1);}
-        .classCube15 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,      0,      0.0001,   1);
-                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,      0,      0.0001,   1);}
-        .classCube16 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   +100,   0,      0.0001,   1);
-                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   +100,   0,      0.0001,   1);}
-        .classCube17 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   -100,   -100,   0.0001,   1);
-                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   -100,   -100,   0.0001,   1);}
-        .classCube18 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,      -100,   0.0001,   1);
-                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,      -100,   0.0001,   1);}
-        .classCube19 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   +100,   -100,   0.0001,   1);
-                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   +100,   -100,   0.0001,   1);}
+        .classCube11 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   -100,   +100,   0,   1);
+                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   -100,   +100,   0,   1);}
+        .classCube12 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,      +100,   0,   1);
+                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,      +100,   0,   1);}
+        .classCube13 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   +100,   +100,   0,   1);
+                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   +100,   +100,   0,   1);}
+        .classCube14 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   -100,   0,      0,   1);
+                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   -100,   0,      0,   1);}
+        .classCube15 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,      0,      0,   1);
+                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,      0,      0,   1);}
+        .classCube16 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   +100,   0,      0,   1);
+                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   +100,   0,      0,   1);}
+        .classCube17 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   -100,   -100,   0,   1);
+                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   -100,   -100,   0,   1);}
+        .classCube18 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,      -100,   0,   1);
+                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,      -100,   0,   1);}
+        .classCube19 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   +100,   -100,   0,   1);
+                              transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   +100,   -100,   0,   1);}
         /* 3rd_Layer of 27 unit cubes*/
         .classCube21 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   -100,   +100,   -100,   1);
                               transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   -100,   +100,   -100,   1);}
@@ -255,7 +240,7 @@
     </style>
 </head>
 
-<body style="background-color:#222222;">    
+<body style="background-color:#444444;">    
     <table id="mainTable" border="1" class="tbl">
         <thead></thead>
         <tbody>
