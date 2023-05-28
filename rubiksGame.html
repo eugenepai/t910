@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Rubik's Cube Everywhere! --- WCA Rules 102-9</title>
+    <title>Rubik's Cube Everywhere! --- WCA Rules 102-10</title>
     <meta charset="utf-8">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
@@ -59,7 +59,7 @@
             font-size:xx-large ; }
         /* unit cube: shape */
         .ucSticker {border: solid black 4px; border-radius:20px;}
-        .ucShape {border: solid green 4px; box-sizing: border-box; background-color: black;}
+        .ucShape {border: solid black 4px; box-sizing: border-box; background-color: black;}
         
         /* unit cube: color attributes  */
         .red {background-color: red; }
@@ -375,9 +375,12 @@
                             <div id="12U" class="black ucShape fsUp"></div>     <div id="12D" class="black ucShape fsDown"></div>
                         </div>
                         <div id="Cube13" class="classCube13">
-                            <div id="13F" class="red ucShape fsFront"></div>    <div id="13B" class="black ucShape fsBack"></div>
-                            <div id="13L" class="black ucShape fsLeft"></div>   <div id="13R" class="blue ucShape fsRight"></div>
-                            <div id="13U" class="black ucShape fsUp"></div>     <div id="13D" class="black ucShape fsDown"></div>
+                            <div id="13F" class=" ucShape fsFront"></div>    <div class="ucSticker fsFront red"></div>
+                            <div id="13B" class=" ucShape fsBack"></div>   <div class="ucSticker fsBack black"></div>
+                            <div id="13L" class=" ucShape fsLeft"></div>   <div class="ucSticker fsLeft black"></div>
+                            <div id="13R" class=" ucShape fsRight"></div>   <div class="ucSticker fsRight blue"></div>
+                            <div id="13U" class=" ucShape fsUp"></div>     <div class="ucSticker fsUp black"></div>
+                            <div id="13D" class=" ucShape fsDown"></div>   <div class="ucSticker fsDown black"></div>
                         </div>
                         <div id="Cube14" class="classCube14">
                             <div id="14F" class=" ucShape fsFront"></div>   <div class="ucSticker fsFront black"></div>
