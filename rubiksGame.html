@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Rubik's Cube Everywhere! --- WCA Rules 102a</title>
+    <title>Rubik's Cube Everywhere! --- WCA Rules</title>
     <meta charset="utf-8">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
@@ -83,17 +83,17 @@
         
         /*cube face setting */
         .fsUp   {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,+50,1);
-                  z-index:999,zindex:999;       transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,+50,1); } /* X轉0, Z移+50 */
+                         transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   0,0,+50,1); } /* X轉0, Z移+50 */
         .fsDown {-webkit-transform: matrix3d(1,0,0,0,   0,-1,0,0,  0,0,-1,0,  0,0,-50,1);
-                  z-index:999,zindex:999;       transform: matrix3d(1,0,0,0,   0,-1,0,0,  0,0,-1,0,  0,0,-50,1); } /* X轉180, Z移-50 */
+                         transform: matrix3d(1,0,0,0,   0,-1,0,0,  0,0,-1,0,  0,0,-50,1); } /* X轉180, Z移-50 */
         .fsFront{-webkit-transform: matrix3d(1,0,0,0,   0,0,-1,0,  0,1,0,0,   0,+50,0,1);
-                  z-index:999,zindex:999;       transform: matrix3d(1,0,0,0,   0,0,-1,0,  0,1,0,0,   0,+50,0,1); } /* X轉+90, Y移+50 */
+                         transform: matrix3d(1,0,0,0,   0,0,-1,0,  0,1,0,0,   0,+50,0,1); } /* X轉+90, Y移+50 */
         .fsBack {-webkit-transform: matrix3d(1,0,0,0,   0,0,1,0,   0,-1,0,0,  0,-50,0,1);
-                  z-index:999,zindex:999;       transform: matrix3d(1,0,0,0,   0,0,1,0,   0,-1,0,0,  0,-50,0,1); } /* X轉-90, Y移-50 */
+                         transform: matrix3d(1,0,0,0,   0,0,1,0,   0,-1,0,0,  0,-50,0,1); } /* X轉-90, Y移-50 */
         .fsLeft {-webkit-transform: matrix3d(0,0,1,0,   0,1,0,0,   -1,0,0,0,  -50,0,0,1);
-                z-index:999,zindex:999;         transform: matrix3d(0,0,1,0,   0,1,0,0,   -1,0,0,0,  -50,0,0,1); } /* Y轉+90, X移-50 */
+                         transform: matrix3d(0,0,1,0,   0,1,0,0,   -1,0,0,0,  -50,0,0,1); } /* Y轉+90, X移-50 */
         .fsRight{-webkit-transform: matrix3d(0,0,-1,0,  0,1,0,0,   1,0,0,0,   +50,0,0,1); 
-                 z-index:999,zindex:999;        transform: matrix3d(0,0,-1,0,  0,1,0,0,   1,0,0,0,   +50,0,0,1); } /* Y轉-90, X移+50 */
+                         transform: matrix3d(0,0,-1,0,  0,1,0,0,   1,0,0,0,   +50,0,0,1); } /* Y轉-90, X移+50 */
 
         /* 1st_Layer of 27 unit cubes*/
         .classCube01 {-webkit-transform: matrix3d(1,0,0,0,   0,1,0,0,   0,0,1,0,   -100,   +100,   +100,   1);
