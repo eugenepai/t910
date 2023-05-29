@@ -24,8 +24,9 @@
 - [WCA Regulations](https://www.worldcubeassociation.org/regulations/)
 
 ## How to Play
-- How to Play (WCA Rules) [[here]](https://eugenepai.github.io/t907/howToPlay.html)
-- need help to solve Rubik's Cube? [[Hint]](https://eugenepai.github.io/t908/reference/RC_SolveStepsSummary.jpg)  / very useful reference [[here]](https://cubesolve.com/)
+- How to Play (WCA Rules) [[here]](https://eugenepai.github.io/t909/howToPlay.html)
+- Need help to solve Rubik's Cube? [[Hint]](https://eugenepai.github.io/t909/reference/RC_SolveStepsSummary.jpg)  / 
+- Very useful reference [[here]](https://cubesolve.com/)
 
 ## Support or Contact
 
