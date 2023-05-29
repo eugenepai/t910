@@ -17,6 +17,7 @@
 #### on Github
   - (WCA version) html+css+javascript版：webapp改成static html，放在 github pages上 [[currentProject t9-07]](https://eugenepai.github.io/t907/)
   - (WCA version / Dark theme) Dark theme version of t9-07,  with added game timer and congratulation animation when RC is solved [[Dark Theme t9-08]](https://eugenepai.github.io/t908/)
+  - (WCA version / Dark theme) t9-08在mobile device上整個cube黑掉，只能在PC上正常顯示，原因在於原來使用:after的pseduo-element (:after)來製作color sticker的底黑，疑似與新的browser版本不相容(z-index or matrix3d)，導致底黑跑到彩色sticker上面。(解法：底黑與彩色sticker各用一個<div>，再用一個div包起來，利用div stack後來居上的default順序來避免z-index跨browser相容性問題---- solved!!)
 
 ## WCA  / World Cube Association / 世界方塊協會
 - [WCA競賽規則](https://www.worldcubeassociation.org/regulations/translations/chinese-traditional/)
