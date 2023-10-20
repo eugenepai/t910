@@ -44,7 +44,7 @@
             z-index:1;
             -webkit-overflow-scrolling: auto !important;
             width:100px; height: 100px; display:block; margin:270px auto 180px auto; 
-            perspective:none;    -webkit-perspective:none;
+            perspective:500px;    -webkit-perspective:500px;
             transform-style: preserve-3d;    -webkit-transform-style: preserve-3d;
             transform: rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) ; -webkit-transform: rotate3d(1,1,0,-30deg) rotate3d(1,0,0,90deg) ;
             transition: all 350ms linear; -webkit-transition: all 350ms linear;
@@ -88,10 +88,10 @@
         .fsDown {-webkit-transform: matrix3d(1,0,0,0,   0,-1,0,0,  0,0,-1,0,  0,0,-50,1);
                          transform: matrix3d(1,0,0,0,   0,-1,0,0,  0,0,-1,0,  0,0,-50,1); } /* X轉180, Z移-50 */
         /*test*/
-        .fsFront{-webkit-transform: matrix3d(1,0,0,0,   0,0,-1,0,  0,1,0,0,   50,+50,50,1);
-                         transform: matrix3d(1,0,0,0,   0,0,-1,0,  0,1,0,0,   50,+50,50,1); }/* X轉+90, Y移+50 */        
-        .fsBack {-webkit-transform: matrix3d(1,0,0,0,   0,0,1,0,   0,-1,0,0,  -50,-50,-50,1);
-                         transform: matrix3d(1,0,0,0,   0,0,1,0,   0,-1,0,0,  -50,-50,-50,1); } /* X轉-90, Y移-50 */
+        .fsFront{-webkit-transform: matrix3d(1,0,0,0,   0,0,-1,0,  0,1,0,0,   0,+50,0,1);
+                         transform: matrix3d(1,0,0,0,   0,0,-1,0,  0,1,0,0,   0,+50,0,1); }/* X轉+90, Y移+50 */        
+        .fsBack {-webkit-transform: matrix3d(1,0,0,0,   0,0,1,0,   0,-1,0,0,  0,-50,0,1);
+                         transform: matrix3d(1,0,0,0,   0,0,1,0,   0,-1,0,0,  0,-50,0,1); } /* X轉-90, Y移-50 */
         
         .fsLeft {-webkit-transform: matrix3d(0,0,1,0,   0,1,0,0,   -1,0,0,0,  -50,0,0,1);
                          transform: matrix3d(0,0,1,0,   0,1,0,0,   -1,0,0,0,  -50,0,0,1); } /* Y轉+90, X移-50 */
